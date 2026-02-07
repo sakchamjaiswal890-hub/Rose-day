@@ -1,28 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Rose Day</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
-            text-align: center;
-            color: #333;
-            padding: 50px;
-        }
-        h1 {
-            color: #ff4d4d;
-        }
-        .rose {
-            font-size: 50px;
-            color: #d41b1b;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Rose Day Himanshi</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background: linear-gradient(135deg,#ff758c,#ff7eb3);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Segoe UI', sans-serif;
+  overflow:hidden;
+}
+
+.card{
+  background:white;
+  padding:35px;
+  border-radius:25px;
+  text-align:center;
+  width:85%;
+  max-width:420px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+h1{
+  color:#e6005c;
+}
+
+p{
+  font-size:17px;
+  color:#444;
+}
+
+button{
+  margin-top:15px;
+  padding:10px 20px;
+  border:none;
+  border-radius:20px;
+  background:#ff4d6d;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.rose{
+  position:absolute;
+  top:-40px;
+  font-size:30px;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(360deg);
+  }
+}
+</style>
 </head>
+
 <body>
-    <h1 class="rose">🌹 Happy Rose Day! 🌹</h1>
-    <p>On this special day, may your life be filled with the beauty and joy of roses!</p>
+
+<div class="card">
+  <h1>🌹 Happy Rose Day Himanshi 🌹</h1>
+  <p>
+    My Kissu Baby 💖,<br><br>
+    Just like a rose, you fill my life with beauty and happiness 🌸.  
+    You are my smile 😄, my peace 😌 and my favorite person 💕.  
+    On this Rose Day, I'm sending you all my love, hugs and sweetness 😘🤍.  
+    Stay happy always my Babu Jaan 🥰🌹.
+  </p>
+
+  <button onclick="alert('🌹 I Love You Himanshi 🌹')">
+    Tap for Love 💖
+  </button>
+</div>
+
+<script>
+for(let i=0;i<35;i++){ 
+  let rose=document.createElement("div");
+  rose.className="rose";
+  rose.innerHTML="🌹";
+  rose.style.left=Math.random()*100+"vw";
+  rose.style.animationDuration=(Math.random()*3+3)+"s";
+  document.body.appendChild(rose);
+}
+</script>
+
 </body>
 </html>
